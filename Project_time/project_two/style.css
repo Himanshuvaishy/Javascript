@@ -1,3 +1,9 @@
+body{
+    margin: 0 auto;
+    width: 50%;
+    background-color: bisque;
+}
+
 .container {
     width: 575px;
     height: 825px;
@@ -21,7 +27,7 @@
     font-size: 35px;
     margin-left: 90px;
     margin-top: 20px;
-    color: rgb(241, 241, 241);
+    color: purple;
   }
   
   button {
