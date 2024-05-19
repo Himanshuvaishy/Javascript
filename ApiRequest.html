@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            console.log(data.followers);
+        }
+    }
+    xhr.send();
+</script>
+</html>
+<!-- 
+XMLHttpRequest (XHR) is an API available in web browser environments that allows for the retrieval and sending of data between a web client and a server asynchronously. This technology plays a critical role in enabling modern web applications to function smoothly without requiring full page reloads, facilitating a more dynamic and responsive user experience.
+
+Key Features and Functions:
+Asynchronous Communication: XHR enables web pages to make HTTP requests to servers in the background, allowing the page to update without refreshing.
+Data Handling: XHR can handle various types of data formats, including XML, JSON, HTML, and plain text.
+HTTP Methods: It supports several HTTP methods, such as GET, POST, PUT, DELETE, etc., allowing for flexible data operations.
+Cross-Browser Compatibility: Although it originated in Internet Explorer, XHR is now a standard part of all major web browsers.
+Event Handling: It includes event handlers to process server responses, such as onreadystatechange, which triggers each time the readyState changes, allowing developers to execute code at different stages of the request lifecycle.
+Example Usage:
+Here is a basic example of how XMLHttpRequest might be used to perform a GET request:
+
+javascript
+Copy code
+// Create a new XMLHttpRequest object
+var xhr = new XMLHttpRequest();
+
+// Configure it: GET-request for the URL /article/.../load
+xhr.open('GET', '/article/.../load', true);
+
+// Set up a function to run when the state changes
+xhr.onreadystatechange = function () {
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    // If the request is successful, process the response
+    console.log(xhr.responseText);
+  }
+};
+
+// Send the request
+xhr.send();
+Properties and Methods:
+Properties:
+xhr.readyState: Holds the status of the XMLHttpRequest.
+xhr.status: Contains the HTTP status code of the request.
+xhr.responseText: Returns the response data as a string.
+xhr.responseXML: Returns the response data as an XML document.
+Methods:
+open(method, url, async): Initializes a request.
+send(data): Sends the request to the server.
+setRequestHeader(header, value): Sets the value of an HTTP request header.
+abort(): Cancels the request.
+Use Cases:
+Dynamic Content Loading: Loading new content into a page without a full reload.
+Form Submission: Sending form data to a server and processing the response without reloading the page.
+Data Fetching: Retrieving data from a server to update the UI dynamically, such as loading new articles or comments.
+Limitations and Alternatives:
+While XHR has been widely used, it has some limitations, such as more complex syntax and error handling compared to newer alternatives like the Fetch API, which provides a more modern and flexible approach for making web requests. -->
+
+<!-- In summary, XMLHttpRequest is a foundational technology for enabling asynchronous web communication, crucial for creating interactive and user-friendly web applications. -->
+
+
+
+
+
+
+
