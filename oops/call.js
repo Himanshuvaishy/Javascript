@@ -1,23 +1,40 @@
-function SetUsername(username){
-    //complex DB calls
-    this.username = username
-    console.log("called");
-}
+// The call() method is often used when you want to use a method from one object on another object, or when you want to explicitly set the this value in a function. It's particularly useful when working with functions that are designed to be generic and can operate on different objects.
 
-function createUser(username, email, password){
-    SetUsername.call(this, username)
-   
-    this.email = email
-    this.password = password
-}
+let name ={
+    firstName:"Himanshu",
+    LastName:"vaishy",
+    
+} 
+function printName(hometown){
+    console.log(this.firstName + ", " + this.LastName+"  from  "+
+    hometown);
+ }
 
-const chai = new createUser("chai", "chai@fb.com", "123")
-console.log(chai);
+  printName.call(name,"lucknow");
+
+  let name2 = {
+    firstName:"Him",
+    LastName:"gupta",
+  }
+// here we are borrowing function from another object
+//   name.printName.call(name2);
+
+// apply
+
+printName.apply(name2,["amethi"]);
+// call() and apply() both let you specify the context in which a function is called, call() expects arguments individually, whereas apply() expects them as an array. This makes apply() useful when you have an array of arguments or when you want to dynamically pass arguments to a function.
+
+// bind
+
+//the only differnce b/t call and bind is call inkove directly while in bind we  bind and a function into a variable and inove them later
+
+ let printFullName =printName.bind(name,"agra");
+ console.log(printFullName);
+ printFullName();
 
 
 
 
-// In JavaScript, the call() method is a built-in function available on all functions. It allows you to invoke a function with a specified this value and arguments provided individually.
 
 // Here's the syntax:
 
