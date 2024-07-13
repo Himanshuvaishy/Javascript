@@ -11,7 +11,7 @@ const map1 = new Map();
 map1.set('a', 1);
 map1.set('b', 2);
 map1.set('c', 3);
-
+ 
 //console.log(map1.get('a'));
 // Expected output: 1
 
@@ -70,7 +70,11 @@ const person = {
     age: 30,
     email: "john@example.com"
 };
-console.log(Object.keys(person).length);
+
+for(i=0;i<Object.keys(person).length;i++){
+    console.log(person[i]);
+}
+//console.log(Object.keys(person).length);
 
 
 // for (const key in person) {

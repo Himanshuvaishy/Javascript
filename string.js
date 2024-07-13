@@ -1,9 +1,9 @@
 const checkStringMethod = "Himanshu";
 
 const checkslice =checkStringMethod.slice(2,4);
-////console.log(checkslice);
+console.log(checkslice);
 const checksubstring=checkStringMethod.substring(0,4);
-//console.log(checksubstring);
+console.log(checksubstring);
 
 
 // charAt

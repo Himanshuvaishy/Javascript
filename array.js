@@ -12,16 +12,20 @@ const myArr2 = new Array(1, 2, 3, 4)
 // myArr.push(7)
 // myArr.pop()
 
-// myArr.unshift(9)
-// myArr.shift()
+//myArr.unshift(9)
+ //myArr.shift()
+// console.log(myArr.shift());
+// console.log(myArr.shift());
+// console.log(myArr.unshift(10));
+// console.log(myArr);
 
-// console.log(myArr.includes(9));
-// console.log(myArr.indexOf(3));
+
+//  console.log(myArr.includes(9));
+//  console.log(myArr.indexOf(3));
 
 // const newArr = myArr.join()
-
-// console.log(myArr);
-// console.log( newArr);
+// const array=["him","vaishy","gupta"];
+// console.log( typeof array.join());
 
 
 // slice, splice
@@ -43,7 +47,13 @@ const myArr2 = new Array(1, 2, 3, 4)
 // splice mutate the original array
 
 const months = ['Jan', 'March', 'April', 'June'];
-months.splice(2, 2, 'May ,sep');
+months.splice(2, 1, 'May ,sep');
 // Replaces 1 element at index 4
+console.log(months);
+months.splice(1,0,'feb');
+console.log(months);
+months.splice(3,0,'aprile')
+console.log(months);
+months.splice(4,1);
 console.log(months);
 // Expected output: Array ["Jan", "Feb", "March", "April", "May"]

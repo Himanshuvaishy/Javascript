@@ -6,15 +6,16 @@ function logInUserMessage(username){
 
     // fals value are 0,"", null,undefined;
     if(!username){
-        console.log("plese enter the usrname");
+        console.log(`plese enter the username `);
+        return;
     }
     return `${username} just logged in`;
 }
-// console.log(logInUserMessage());
-  //console.log(logInUserMessage(""));
+//   console.log(logInUserMessage());
+//   console.log(logInUserMessage(""));
 
 
-// if we not pass any argument value in the fxn and if we set by default value then it takes that value otherwise the pass argument is override the value;
+// if we not pass any argument value in the fxn and if we set by default value then it takes that default  value otherwise the pass argument is override the value;
 
 
 function sayMyName(){
@@ -26,28 +27,29 @@ function sayMyName(){
     console.log("H");
 }
 
-// sayMyName()
-
-// function addTwoNumbers(number1, number2){
-
-//     console.log(number1 + number2);
-// }
+ //sayMyName()
 
 function addTwoNumbers(number1, number2){
 
-    // let result = number1 + number2
-    // return result
-    return number1 + number2
+    console.log(number1 + number2);
 }
+//addTwoNumbers(3,6)
 
-const result = addTwoNumbers(3, 5)
+// function addTwoNumbers(number1, number2){
 
-// console.log("Result: ", result);
+//     // let result = number1 + number2
+//     // return result
+//     return number1 + number2
+// }
+
+// const result = addTwoNumbers(3, 5)
+
+//  console.log("Result: ", result);
 
 
 function loginUserMessage(username = "sam"){
     if(!username){
-        console.log("PLease enter a username");
+       // console.log("PLease enter a username");
         return
     }
     return `${username} just logged in`
@@ -61,7 +63,7 @@ function calculateCartPrice(val1, val2, ...num1){
     return num1
 }
 
-// console.log(calculateCartPrice(200, 400, 500, 2000))
+ console.log(calculateCartPrice(200, 400, 500, 2000))
 
 const user = {
     username: "hitesh",
@@ -69,14 +71,15 @@ const user = {
 }
 
 function handleObject(anyobject){
-    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.prices}`);
 }
-
-// handleObject(user)
-handleObject({
-    username: "sam",
-    price: 399
-})
+// passing object into function
+//handleObject(user)
+  //calling fxn with defiing object
+// handleObject({
+//     username: "sam",
+//     price: 399
+// })
 
 const myNewArray = [200, 400, 100, 600]
 
@@ -84,5 +87,5 @@ function returnSecondValue(getArray){
     return getArray[1]
 }
 
-// console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue(myNewArray));
 console.log(returnSecondValue([200, 400, 500, 1000]));
