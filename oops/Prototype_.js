@@ -24,10 +24,10 @@ Array.prototype.heyHitesh = function(){
     console.log(`Hitesh says hello`);
 }
 
-// heroPower.hitesh()
-// myHeros.hitesh()
-// myHeros.heyHitesh()
-// heroPower.heyHitesh()
+// heroPower.hitesh()//true
+// myHeros.hitesh()//true
+// myHeros.heyHitesh()//true
+// heroPower.heyHitesh()//false
 
 // inheritance
 

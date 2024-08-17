@@ -36,3 +36,4 @@ const userOne = new User("hitesh", 12, true)
 console.log(userOne);
 console.log(userOne.constructor);
 //console.log(userTwo);
+// woking mechanism of new operator read it from chat gpt if need

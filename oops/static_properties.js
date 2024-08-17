@@ -7,13 +7,16 @@ class User {
         console.log(`Username: ${this.username}`);
     }
 
-    static createId(){
+   static  createId(){
         return `123`
     }
 }
+
 console.log(User.createId());
+//console.log(User.createId());
 const hitesh = new User("hitesh")
-// console.log(hitesh.createId())
+ //console.log(hitesh.createId())
+ console.log(User.createId());
 
 class Teacher extends User {
     constructor(username, email){
@@ -23,7 +26,7 @@ class Teacher extends User {
 }
 
 const iphone = new Teacher("iphone", "i@phone.com")
-console.log(iphone.createId());
+//console.log(iphone.createId());
 
 
 /* However, you can't directly access static methods from instances. Instead, you should call static methods directly on the class itself. So, to call the createId method, you would use User.createId() rather than iphone.createId().
