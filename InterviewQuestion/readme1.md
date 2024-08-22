@@ -18,6 +18,7 @@ function show() {
     console.log(this);
 }
 show();  // In non-strict mode, this will log the `window` object
+
 Method Context:
 
 When a function is called as a method of an object, this refers to the object that owns the method.
@@ -52,6 +53,7 @@ const person = {
     }
 };
 person.greet();  // Logs `undefined` because `this` refers to the global object
+
 Explicit Binding:
 
 You can explicitly set the value of this using call, apply, or bind.
