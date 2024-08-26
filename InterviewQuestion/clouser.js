@@ -13,7 +13,7 @@ function outerFunction() {
     let outerVariable = 'I am from outerFunction';
 
     function innerFunction() {
-        console.log(outerVariable);
+       // console.log(outerVariable);
     }
 
     return innerFunction; //if here we will not return the innerFunction and line excuted just below  then due to lexical scope we can access outerVariable  in innerFunction.
@@ -27,6 +27,32 @@ myClosure(); // Output: 'I am from outerFunction'
 
 // !Use Cases:
 // ?Encapsulation: Closures are often used to create private variables or functions that cannot be accessed from outside the function.
+function Counter() {
+    let count = 0; // Private variable
+
+    return {
+        increment: function() {
+            count++;
+            return count;
+        },
+        decrement: function() {
+            count--;
+            return count;
+        },
+        getValue: function() {
+            return count;
+        }
+    };
+}
+
+const myCounter = Counter();
+
+console.log(myCounter.increment()); // 1
+console.log(myCounter.increment()); // 2
+console.log(myCounter.getValue());  // 2
+console.log(myCounter.decrement()); // 1
+console.log(myCounter.count);       // undefined (count is private)
+
 
 //?Callbacks and Event Handlers: Closures are commonly used in asynchronous code, such as callbacks or event handlers, where the callback function retains access to variables from its containing function.
 

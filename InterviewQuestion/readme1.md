@@ -65,6 +65,7 @@ function greet() {
 
 const person = { name: 'Bob' };
 greet.call(person);  // Logs 'Bob'
+
 Summary:
 this is dynamic and depends on how a function is called.
 In the global scope, this refers to the global object.

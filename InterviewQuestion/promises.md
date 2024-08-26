@@ -10,6 +10,7 @@ Key Concepts:
 Pending: The initial state of a promise. It means the operation has not completed yet.
 Fulfilled: The state when the operation has completed successfully, and the promise has a result (a resolved value).
 Rejected: The state when the operation has failed, and the promise has a reason for failure (an error).
+
 Creating a Promise:
 A promise is created using the Promise constructor, which takes a function (executor) with two arguments: resolve and reject.
 
@@ -103,6 +104,7 @@ fetchData() returns a promise that simulates an API call.
 then() handles the success case.
 catch() handles any errors.
 finally() runs after the promise is either resolved or rejected, performing any necessary cleanup.
+
 Why Use Promises?
 Improves Readability: Promises help make asynchronous code easier to read and manage.
 Avoids Callback Hell: By chaining .then(), .catch(), and .finally(), you can avoid deeply nested callbacks.
@@ -115,6 +117,7 @@ A promise can be in one of three states:
 Pending: The initial state, where the promise has neither been fulfilled nor rejected.
 Fulfilled: The state when the promise is resolved successfully. It means the asynchronous operation completed successfully.
 Rejected: The state when the promise is rejected due to an error. It means the asynchronous operation failed.
+
 2. Promise Constructor
 The Promise constructor takes a function with two parameters:
 
@@ -132,6 +135,7 @@ const myPromise = new Promise((resolve, reject) => {
         reject("Operation failed.");
     }
 });
+
 3. Promise Methods
 then()
 Purpose: Handles the case when a promise is fulfilled.
@@ -150,6 +154,7 @@ myPromise.then(
         console.log(error); // Will not be called in this case
     }
 );
+
 catch()
 Purpose: Handles the case when a promise is rejected.
 Parameters:
@@ -162,6 +167,7 @@ myPromise
     .catch((error) => {
         console.log(error); // Output if rejected: "Operation failed."
     });
+    
 finally()
 Purpose: Executes a callback after the promise is settled, regardless of its outcome (fulfilled or rejected).
 Parameters:
@@ -174,6 +180,7 @@ myPromise
     .finally(() => {
         console.log("Promise has been settled."); // Runs regardless of promise outcome
     });
+
 4. Chaining Promises
 Promises can be chained to perform multiple asynchronous operations in sequence. Each then() returns a new promise, allowing chaining.
 
@@ -203,6 +210,7 @@ fetchData()
     .finally(() => {
         console.log("All operations complete.");
     });
+
 5. Promise.all()
 Purpose: Takes an array of promises and returns a single promise that resolves when all of the promises in the array have resolved. It rejects if any of the promises reject.
 Example:
@@ -220,6 +228,7 @@ Promise.all([promise1, promise2, promise3])
     .catch((error) => {
         console.log("Error:", error);
     });
+
 6. Promise.race()
 Purpose: Takes an array of promises and returns a single promise that resolves or rejects as soon as one of the promises in the array resolves or rejects.
 Example:

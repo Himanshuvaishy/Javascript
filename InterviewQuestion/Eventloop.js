@@ -21,9 +21,13 @@ console.log("End");
 
 console.log("Start");
 
-setTimeout(() => {
-    console.log("Timeout callback2");
-}, 0);
+// setTimeout(() => {
+//     console.log("Timeout callback2");
+// }, 0);
+setTimeout(()=>{
+    console.log("timeout callbacks");
+    
+},0);
 
 Promise.resolve().then(() => {
     console.log("Promise callback");

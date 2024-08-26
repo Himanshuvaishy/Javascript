@@ -9,17 +9,21 @@ Call Stack:
 
 The call stack is where your code is executed. JavaScript functions get pushed onto the stack when invoked and are popped off once they finish executing.
 The call stack is responsible for keeping track of where the code is during execution.
+
 Web APIs (or Browser APIs):
 
 These are provided by the browser and include things like setTimeout, DOM events, HTTP requests (AJAX/fetch), etc.
 When you make an asynchronous call, such as setTimeout or fetch, the callback is handed off to the browser's Web APIs.
+
+For asynchronous opeation like settimeout,DOM events, HTTP requests etc.,javascript relies on the web API's which is provided by the browser.these operation ae handeld outside the call stack
+
 Callback Queue (or Task Queue):
 
 Once the asynchronous operation is completed, its callback is placed in the callback queue (also known as the task queue).
 This queue is a list of callbacks waiting to be executed.
 Event Loop:
 
-The event loop continuously checks if the call stack is empty. If it is, it checks the callback queue.
+The event loop  is like a manager continuously checks if the call stack is empty. If it is, it checks the callback queue.
 If there are callbacks in the queue and the call stack is empty, the event loop pushes the first callback from the queue onto the call stack to be executed.
 Example to Illustrate the Event Loop
 Let's look at a simple example:

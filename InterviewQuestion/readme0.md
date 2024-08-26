@@ -2,7 +2,7 @@ Q-1 What are closures in JavaScript, and how do they work? Can you provide an ex
 
 Ans--
 
-A closure is created when a function is defined inside another function, allowing the inner function to "remember" the variables from the outer function's scope. This is possible because, in JavaScript, functions have access to the scope in which they were created, even after the outer function has finished executing.\
+A closure is created when a function is defined inside another function, allowing the inner function to "remember" the variables from the outer function's scope. This is possible because, in JavaScript, functions have access to the scope in which they were created, even after the outer function has finished executing.
   
 How Closures Work
 

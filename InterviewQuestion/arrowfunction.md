@@ -110,11 +110,13 @@ Explanation:
 
 Regular functions can be used as constructors with the new keyword. They create a new object and set this to refer to that new object.
 Arrow functions cannot be used as constructors, and trying to do so results in an error.
+
 5. No arguments Object in Arrow Functions
 Regular Function:
 
 javascript
 Copy code
+
 function sum() {
     console.log(arguments);
     return Array.from(arguments).reduce((acc, curr) => acc + curr, 0);
@@ -135,6 +137,7 @@ Explanation:
 
 Regular functions have an arguments object that contains all the arguments passed to the function.
 Arrow functions do not have their own arguments object. Instead, they rely on the rest parameters (...args) if you need to access the function's arguments.
+
 When to Use Arrow Functions:
 Simple Callbacks: Arrow functions are great for simple callbacks or for when you need to maintain the this context of the surrounding scope, such as in event handlers or array methods like map, filter, etc.
 Avoiding this Confusion: Use arrow functions when you want to avoid confusion with the this keyword, especially in nested functions.

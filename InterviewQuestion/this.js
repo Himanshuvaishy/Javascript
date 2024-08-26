@@ -50,7 +50,7 @@ const person2 = { name: 'Bob' };
 const user = {
     name: 'Himanshu',
     greet: function() {
-        console.log(`Hello, my name is ${this.name}.`);
+        console.log(`Hello, my name is.`);
 
         const getGreeting = () => {
             console.log(`Greeting from ${this.name}!`);
@@ -60,8 +60,8 @@ const user = {
     }
 };
 
-//user.greet();
-// Output:
+user.greet();
+Output:
 // Hello, my name is Himanshu.
 // Greeting from Himanshu!
 
@@ -75,18 +75,18 @@ const user = {
 
 
 // !Example 2: Multiple Nested Arrow Functions
-const person3 = {
-    name: 'Alice',
-    sayHello: function() {
-        const outerArrow = () => {
-            const innerArrow = () => {
-                console.log(`Hello, ${this.name}`);
-            };
-            innerArrow();
-        };
-        outerArrow();
-    }
-};
+// const person3 = {
+//     name: 'Alice',
+//     sayHello: function() {
+//         const outerArrow = () => {
+//             const innerArrow = () => {
+//                 console.log(`Hello, ${this.name}`);
+//             };
+//             innerArrow();
+//         };
+//         outerArrow();
+//     }
+// };
 
 //person3.sayHello();  // Output: "Hello, Alice"
 
@@ -162,8 +162,8 @@ class Counter {
         }, 1000);
     }
 }
-const counter = new Counter();
-counter.increment();  // Works as expected, `this` refers to the Counter instance
+// const counter = new Counter();
+// counter.increment();  // Works as expected, `this` refers to the Counter instance
 
 
 

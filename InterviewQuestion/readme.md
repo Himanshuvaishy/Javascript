@@ -4,10 +4,12 @@ var
 Scope: Function-scoped or globally scoped if declared outside a function.
 Mutability: Can be reassigned a new value.
 Hoisting: Variables are hoisted to the top of their scope, but initialized with undefined.
+
 let
 Scope: Block-scoped (within curly braces {}).
 Mutability: Can be reassigned a new value.
 Hoisting: Variables are hoisted to the top of their scope, but not initialized.
+
 const
 Scope: Block-scoped (within curly braces {}).
 Mutability: Cannot be reassigned a new value once declared.

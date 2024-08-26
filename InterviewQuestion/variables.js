@@ -8,24 +8,24 @@
 
 function xyz(){
 let x=40;
-   // console.log(x);
-  // var y=30;
+    //console.log(x);
+    var y=30;
    let z=20;
 
     if(true){
         //var y=20;// here y is function scoped
-        var y=20; //  here y is blocked scope 
+       // var y=20; //  here y is blocked scope 
        // console.log(x);
        // console.log(y);
         let z=30;
-        console.log(z);
+       // console.log(z);
         
         
         
     }
     console.log(z);
     
-  //  console.log(y);// ! can access in case of var but not in case of let and const
+    console.log(y);// ! can access in case of var but not in case of let and const
     
     
 }
